@@ -8,7 +8,7 @@ package dao;
 
 /**
  *
- * @author Guilheme Henrique Bialas
+ * @author Guilheme Bialas
  * @Date 08/10/2018
  */
 public class FilmeDAO {
