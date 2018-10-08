@@ -10,6 +10,10 @@
  */
 public class Filme {
      private String nome, diretor, categoria, atorPrincipal, faixaEtaria, idiomaOriginal; 
+    private boolean legenda, dublado;
+    private short tempoFilme, ano;
+    private double faturamento, orcamento;
+   
 
     public String getNome() {
         return nome;
@@ -106,8 +110,4 @@ public class Filme {
     public void setAno(short ano) {
         this.ano = ano;
     }
-    private boolean legenda, dublado;
-    private short tempoFilme;
-    private double faturamento, orcamento;
-    private short ano;
 }
