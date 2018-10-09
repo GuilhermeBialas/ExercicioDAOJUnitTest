@@ -8,7 +8,7 @@ package bean;
 
 /**
  *
- * @author Alunos
+ * @author Guilherme Henrique Bialas
  */
 public class Filme {
      private String nome, diretor, categoria, atorPrincipal, faixaEtaria, idiomaOriginal; 
