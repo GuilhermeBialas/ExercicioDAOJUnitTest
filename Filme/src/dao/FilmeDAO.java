@@ -47,7 +47,7 @@ public class FilmeDAO {
                 Conexao.desconectar();
             }
         }
-        return false;
+        return -1;
 
     }
 
