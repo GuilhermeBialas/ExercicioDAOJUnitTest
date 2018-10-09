@@ -5,11 +5,17 @@
  */
 package data;
 
+import java.sql.Connection;
+
 /**
  *
  * @author Guilherme HEnrique Bialas 
  */
 public class Conexao {
+
+    public static Connection conectar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
    
     
     

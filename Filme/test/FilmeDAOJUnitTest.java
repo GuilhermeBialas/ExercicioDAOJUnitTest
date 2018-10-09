@@ -5,6 +5,7 @@
  */
 
 import bean.Filme;
+import dao.FilmeDAO;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -13,6 +14,8 @@ import static org.junit.Assert.*;
  * @author Guilherme Henrique Bialas
  */
 public class FilmeDAOJUnitTest {
+    private Object dao;
+   
     
     @Test
     public void testarCadastro(){
@@ -27,8 +30,27 @@ public class FilmeDAOJUnitTest {
         sony.setIdiomaOriginal("Inglês");
         sony.setLegenda(true);
         sony.setOrcamento(500000);
-        sony.setTempoFilme(180);
         sony.setAno(2018);
+        sony.setTempoFilme(180);
+        
+        int identificador = new FilmeDAO().cadastrar(sony);
+        
+        assertNotSame(identificador, -1);
+        Filme filmeBuscado = new FilmeDAO.obterPeloId(identificador);
+        assertNotNull(filmeBuscado);
+    
+        assertEquals(sony.getAno(),filmeBuscado.getAno());
+        assertEquals(sony.getAtorPrincipal(),filmeBuscado.getAtorPrincipal());
+        assertEquals(sony.getCategoria(),filmeBuscado.getCategoria());
+        assertEquals(sony.getDiretor(),filmeBuscado.getDiretor());
+        assertEquals(sony.getFaixaEtaria(),filmeBuscado.getFaixaEtaria());
+        assertEquals(sony.getFaturamento(),filmeBuscado.getFaturamento());
+        assertEquals(sony.getIdiomaOriginal(),filmeBuscado.getIdiomaOriginal());
+        assertEquals(sony.getNome(),filmeBuscado.getNome());
+        assertEquals(sony.getOrcamento(),filmeBuscado.getOrcamento());
+        assertEquals(sony.getTempoFilme(),filmeBuscado.getTempoFilme());
+    
+    
     }
     
     

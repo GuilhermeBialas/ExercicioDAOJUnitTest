@@ -13,7 +13,7 @@ package bean;
 public class Filme {
      private String nome, diretor, categoria, atorPrincipal, faixaEtaria, idiomaOriginal; 
     private boolean legenda, dublado;
-    private short tempoFilme, ano;
+    private int tempoFilme, ano;
     private double faturamento, orcamento;
    
 
@@ -81,11 +81,11 @@ public class Filme {
         this.dublado = dublado;
     }
 
-    public short getTempoFilme() {
+    public int getTempoFilme() {
         return tempoFilme;
     }
 
-    public void setTempoFilme(short tempoFilme) {
+    public void setTempoFilme(int tempoFilme) {
         this.tempoFilme = tempoFilme;
     }
 
@@ -105,11 +105,11 @@ public class Filme {
         this.orcamento = orcamento;
     }
 
-    public short getAno() {
+    public int getAno() {
         return ano;
     }
 
-    public void setAno(short ano) {
+    public void setAno(int ano) {
         this.ano = ano;
     }
 }
