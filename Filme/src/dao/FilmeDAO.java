@@ -58,8 +58,14 @@ public class FilmeDAO {
 
     public static class obterPeloId extends Filme {
 
-        public obterPeloId(int identificador) {
-        }
+       
+        
+        
+        
+        
+        
+        
+        
     }
 
 }
