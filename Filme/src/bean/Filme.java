@@ -13,7 +13,15 @@ package bean;
 public class Filme {
      private String nome, diretor, categoria, atorPrincipal, faixaEtaria, idiomaOriginal; 
     private boolean legenda, dublado;
-    private int tempoFilme, ano;
+    private int tempoFilme, ano, id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
     private double faturamento, orcamento;
    
 
