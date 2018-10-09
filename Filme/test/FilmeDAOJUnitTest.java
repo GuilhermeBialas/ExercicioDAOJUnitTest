@@ -27,8 +27,8 @@ public class FilmeDAOJUnitTest {
         sony.setIdiomaOriginal("Inglês");
         sony.setLegenda(true);
         sony.setOrcamento(500000);
-        sony.setTempoFilme(150);
-        sony.setAno();
+        sony.setTempoFilme(180);
+        sony.setAno(2018);
     }
     
     

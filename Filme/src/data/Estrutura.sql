@@ -9,7 +9,7 @@
  */
 
 DROP DATABASE IF EXISTS filmes;
-CREATE DATABESE filmes;
+CREATE DATABASE filmes;
 USE filmes;
 
 CREATE TABLE filmes(
@@ -22,8 +22,8 @@ ator_principal VARCHAR(100),
 idioma_original VARCHAR(50),
 legenda BOOLEAN,
 dublado BOOLEAN,
-tempo_filme SHORT,
-ano TINYINT,
+tempo_filme SMALLINT ,
+ano SMALLINT ,
 faturmento DOUBLE,
 orcamento DOUBLE
 );
