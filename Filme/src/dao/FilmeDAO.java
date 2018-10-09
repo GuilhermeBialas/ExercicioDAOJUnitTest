@@ -4,6 +4,7 @@ import bean.Filme;
 import data.Conexao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -40,7 +41,11 @@ public class FilmeDAO {
                 ps.setDouble(11, sony.getFaturamento());
                 ps.setDouble(12, sony.getOrcamento());
                 ps.setInt(13, sony.getId());
-                return ps.executeUpdate();
+                ps.execute();
+                ResultSet rs = ps.getGeneratedKeys();
+                if (rs.next()) {
+                    return rs.getInt(1);
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             } finally {
