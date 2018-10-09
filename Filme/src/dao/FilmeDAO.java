@@ -16,7 +16,7 @@ import java.sql.PreparedStatement;
  * @Date 08/10/2018
  */
 public class FilmeDAO {
-    
+
     public int cadastrar(Filme sony) {
         Connection conexao = Conexao.conectar();
         if (conexao != null) {
@@ -24,7 +24,7 @@ public class FilmeDAO {
                     + "\n(nome,diretor,categoria,faixa_etaria,ator_principal,idioma_original,"
                     + "legenda,dublado,tempo_filme,ano,faturmento,orcamento)"
                     + "\n(?,?,?,?,?,?,?,?,?,?,?,?)";
-            
+
             try {
                 PreparedStatement ps = conexao.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
                 ps.setString(1, sony.getNome());
@@ -40,23 +40,21 @@ public class FilmeDAO {
                 ps.setDouble(11, sony.getFaturamento());
                 ps.setDouble(12, sony.getOrcamento());
                 ps.setInt(13, sony.getId());
-               return ps.executeUpdate() == 1;
+                return ps.executeUpdate();
             } catch (Exception e) {
                 e.printStackTrace();
-            }finally{
-            Conexao.desconectar();
+            } finally {
+                Conexao.desconectar();
+            }
         }
-        }
-    
-    return false;
+        return false;
+
     }
-    
-    
-    
+
     public static class obterPeloId extends Filme {
-        
+
         public obterPeloId(int identificador) {
         }
     }
-    
+
 }
